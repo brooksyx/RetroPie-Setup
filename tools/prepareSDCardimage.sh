@@ -6,7 +6,7 @@ sudo apt-get autoremove
 sudo apt-get clean
 
 # remove es_input.cfg etc.
-rm ~/.emulationstation/es_input.cfg
+rm -rf ~/.emulationstation
 rm ~/ocr_pi.png
 rm -rf ~/python_games/
 rm -rf ~/Desktop/
@@ -16,14 +16,14 @@ rm ~/.bash_history
 # check file system for errors
 # e2fsck -f -y -v /dev/sdaX
 
-# resize partition on SD card to 3400 MB with gparted
+# resize partition on SD card to 3200 MB with gparted
 
 # re-check file system for errors
 # e2fsck -f -y -v /dev/sdaX
 
 # read and compress image of SD card with
-#   dd if=/dev/disk2 bs=2m of=RetroPieImage_verX.img count=1750
+#   dd if=/dev/disk2 bs=2m of=RetroPieImage_verX.img count=1650
 #   zip -9 RetroPieImage_verX.zip RetroPieImage_verX.img
 
-# create SHA1 hash with 
+# create SHA1 hash with
 #   shasum RetroPieImage_verX.zip
